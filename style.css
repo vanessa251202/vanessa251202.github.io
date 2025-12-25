@@ -1,13 +1,13 @@
 body{
-  background-color:#fof8ff;  /＊背景顏色＊/
-  font-family:'BiauKai’,sans-serif  /*字型＊/
-  text-align: center; /*文字置中＊/
+  background-color:#f0f8ff;  /*背景顏色*/
+  font-family:'BiauKai',sans-serif;  /*字型*/
+  text-align: center; /*文字置中*/
 }
 
 h1{
-  color: #ff4500; /*標題顏色＊/
+  color: #ff4500; /*標題顏色*/
 }
 
 p{
-  color: #333333; /*文字顏色＊/
-  
+  color: #333333; /*文字顏色*/
+}
