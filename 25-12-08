@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="zh-TW>
+<html lang="zh-TW">
 <head>
-<meta charest="UTF-8">
+<meta charset="UTF-8">
 <title>25-12-08 基礎JAVA</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -11,7 +11,19 @@
 </nav>
 
 <h1>2025-12-08 學習筆記</h1>
+<h2>Java 基礎</h2>
+<ul>
+  <li>Java SE 架構</li>
+  <li>Java 版本歷史</li>
+  <li>JDK 17 下載</li>
+</ul>
 
+<h2>測試</h2>
+<pre><code>
+java
+javac
+java -version
+</code></pre>
 
 
 </body>
