@@ -1,5 +1,160 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<mata charest="UTF-8">
-<title>20
+<meta charset="UTF-8">
+<title>25-12-10 基礎JAVA註解、資料、變數</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+<!-- 導覽列 -->
+<nav>
+  <a href="index.html">首頁</a> |
+  <a href="25-12-08.html">2025-12-08 基礎JAVA</a> |
+  <a href="25-12-10.html">2025-12-10 基礎JAVA註解、資料、變數</a>
+</nav>
+    <h1>2025-12-10 學習筆記</h1>
+
+    <!--內容區塊-->
+    <div class="content">
+    <h2>程式碼範例</h2>
+    <pre><code>
+public class MainClass {
+    public static void main(String[] args) {
+        System.out.println("Hello! Java!");
+        
+        // 【快捷鍵】先輸入 sout 再按 <TAB>
+        System.out.println("資料型別...");
+        
+        // 區域變數(宣告在方法內的變數)
+        // 【語法】資料型別 變數名稱 = 值;
+        // 資料型別：基本型別、參考型別
+        // 基本型別┬數字 ┬ 整數(byte、short、int、long)
+	//　　　　 │　　 ├ 浮點數(float、double)
+	//　　　 　│　　 └ 字元(char)
+	//　　　 　└邏輯 ─ 布林(boolean)
+
+        // 整數：預設型別 int(-2147483648 ~ 2147483647)
+        int a1 = 10;
+        System.out.println(a1);
+        System.out.println(a1 * 2);
+        System.out.println("--------------");
+        
+        System.out.println(2147483647);
+        System.out.println(2147483648L); // 2147483648 已經超出 int 可處理的範圍，需要在數字的後方加上【L】或【l】，告知編譯器用 long 型別處理
+        System.out.println("--------------");
+        
+        // int a2 = 123L;  // 編譯失敗，右大左小(放不進去)
+        long a2 = 123L;
+        System.out.println(a2);
+        System.out.println("--------------");
+        
+        /*
+        二進位 (Binary，bin)
+        基數為 2 的系統：逢 2 進位。
+        數字符號：0b 0, 1。
+        
+        八進位 (Octal，oct)
+        基數 8 的系統：逢 8 進位。
+        數字符號：0 0, 1, 2, 3, 4, 5, 6, 7。
+        
+        十進位 (Decimal，dec)
+        基數 10 的系統：逢 10 進位。
+        數字符號：0, 1, 2, 3, 4, 5, 6, 7, 8, 9。
+        
+        十六進位 (Hexadecimal，hex)
+        基數 16 的系統：逢 16 進位。
+        數字符號：0x 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 與 10 → A, 11 → B, 12 → C, 13 → D, 14 → E, 15 → F。
+        
+        */
+        
+        System.out.println(6699); // 十進位
+        System.out.println(0b0001101000101011); // 二進位
+        System.out.println(015053);     // 八進位
+        System.out.println(0x1A2B);     // 十六進位  
+        
+        System.out.println("--------------");
+        
+        // 浮點數(近似值)，預設 double 型別
+        // IEEE 754 規範，二進位浮點數算術標準(https://zh.wikipedia.org/zh-tw/IEEE_754)
+        // 1/2 -> 0.5
+        // 1/4 -> 0.25
+        // 1/2 + 1/4 -> 0.75
+        // 【參考】BigDecimal  https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigDecimal.html
+        
+        System.out.println(0.1 + 0.1 + 0.1);
+        System.out.println(1.0 - 0.8);
+        
+        double b1 = 1.23;
+        float b2 = 1.23F;   // 在小數資料後方加上【F】或【f】 -> float 型別
+        System.out.println(b1 + b2);
+        System.out.println("-------------------");
+        
+        // 字元 char 使用一對單引號將一個字標示
+        // https://zh.wikibooks.org/zh-tw/Unicode
+        
+        char c1 = 'A';
+        System.out.println(c1);
+        char c2 = '\u0041';     // 以 16 進位指定 Unicode 字元輸出
+        System.out.println(c2);
+        
+        System.out.println('\u26c4');   // ⛄
+        System.out.println('冰');
+        System.out.println('\u5496');
+        System.out.println('\u5561');
+        // 使用 ""(String 字串型別)放入多個字元
+        System.out.println("我想要喝\u5496\u5561");
+        System.out.println("----------------------");
+        
+        // 跳脫字元
+        System.out.println('\'');  // 使用 \' 顯示【'】
+        System.out.println("\"");  // 使用 \" 顯示【"】
+        System.out.println("今天學\"Java程式設計\"的開發課程");
+        
+        System.out.println("JavaPythonC#");
+        System.out.println("Java\nPython\nC#");  // 使用 \n 讓字串換行
+        
+        System.out.println("Jaosn 99 100 88");
+        System.out.println("Amy 100 80 90");
+        System.out.println("Lisa 85 95 100");
+        System.out.println("-------------------------");
+        System.out.println("12345678123456781234567812345678"); // 觀察定位用
+        System.out.println("Jaosn\t99\t100\t88");               // 使用 \t 跳格 8 個字元
+        System.out.println("Amy\t100\t80\t90");
+        System.out.println("Lisa\t85\t95\t100");
+        System.out.println("-------------------------");
+        
+        System.out.println("c:\temp\news\test.java");
+        System.out.println("c:\\temp\\news\\test.java");      // 使用 \\ 顯示【\】
+        
+        // 邏輯：布林 boolean --> true / false
+        // boolean d1 = 1;   // 編譯失敗，布林值只有 true / false
+        boolean d2 = 5 > 3;
+        System.out.println(d2);
+        boolean d3 = 5 > 8;
+        System.out.println(d3);
+        
+        System.out.println("----------------");
+        
+        // int e1;                 // 宣告區域變數未給值
+        // System.out.println(e1); // 區域變數未給值不可以使用
+        
+    }
+    
+}
+        </code></pre>    
+      </div>
+  </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
