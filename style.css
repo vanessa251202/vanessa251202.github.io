@@ -1,13 +1,66 @@
-body{
-  background-color:#f0f8ff;  /*背景顏色*/
-  font-family:'BiauKai',sans-serif;  /*字型*/
-  text-align: center; /*文字置中*/
+/* ------------------ 全域設定 ------------------ */
+body {
+  font-family: 'BiauKai', sans-serif; /* 字型 */
+  background-color: #f0f8ff;           /* 淡藍背景 */
+  color: #333333;                      /* 文字顏色 */
+  margin: 0;
+  padding: 0;
 }
 
-h1{
-  color: #ff4500; /*標題顏色*/
+/* ------------------ 導覽列 ------------------ */
+nav {
+  background-color: #ffefd5; /* 淡橘背景 */
+  padding: 10px 20px;
+  text-align: center;
 }
 
-p{
-  color: #333333; /*文字顏色*/
+nav a {
+  color: #ff4500; /* 連結顏色 */
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline; /* 滑鼠移上去加底線 */
+}
+
+/* ------------------ 標題 ------------------ */
+h1 {
+  text-align: center;
+  color: #ff4500;
+}
+
+h2 {
+  color: #333333;
+}
+
+/* ------------------ 內容區塊 ------------------ */
+.content {
+  max-width: 900px;  /* 內容寬度 */
+  margin: 20px auto; /* 上下 20px，置中 */
+  padding: 20px;     /* 內距 */
+  background-color: #ffffff; /* 白色背景 */
+  border-radius: 8px;       /* 圓角 */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* 陰影 */
+}
+
+/* ------------------ 清單 ------------------ */
+ul {
+  margin-left: 20px; /* 清單靠左縮排 */
+}
+
+/* ------------------ 程式碼區塊 ------------------ */
+pre {
+  background-color: #f5f5f5; /* 淺灰背景 */
+  padding: 15px;
+  overflow-x: auto;          /* 長程式碼水平滾動 */
+  border-left: 5px solid #ff4500; /* 左側紅色標記 */
+  white-space: pre-wrap;      /* 自動換行 */
+  word-wrap: break-word;      /* 自動斷行 */
+}
+
+code {
+  font-family: 'Courier New', monospace; /* 等寬字型 */
+  color: #000000;
 }
