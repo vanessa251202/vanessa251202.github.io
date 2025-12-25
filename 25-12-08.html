@@ -1,9 +1,26 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
 <title>25-12-08 基礎JAVA</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  /* 內容容器靠左 */
+  .content {
+    text-align: left;
+  }
+
+  /* 標題置中 */
+  h1 {
+    text-align: center;
+  }
+
+  /* 程式碼靠左，保留縮排 */
+  pre {
+    text-align: left;
+    white-space: pre;
+  }
+</style>
 </head>
 <body>
 
@@ -15,25 +32,28 @@
 <!-- 主標題 -->
 <h1>2025-12-08 學習筆記</h1>
 
-<!-- 識別字命名符號 -->
-<h2>識別字命名符號</h2>
-<ul>
-  <li>第一個字：a-z A-Z _(底線) $</li>
-  <li>第二個字開始：a-z A-Z 0-9 _(底線) $</li>
-  <li>Java 保留字、關鍵字不可用於命名</li>
-</ul>
+<!-- 筆記內容 -->
+<div class="content">
 
-<!-- 命名習慣 -->
-<h2>命名習慣</h2>
-<ul>
-  <li>類別、介面：Hello、HelloWorld</li>
-  <li>方法、變數：name、employeeId</li>
-  <li>常數(不可改)：PI、MAX_VALUE</li>
-</ul>
+  <!-- 識別字命名符號 -->
+  <h2>識別字命名符號</h2>
+  <ul>
+    <li>第一個字：a-z A-Z _(底線) $</li>
+    <li>第二個字開始：a-z A-Z 0-9 _(底線) $</li>
+    <li>Java 保留字、關鍵字不可用於命名</li>
+  </ul>
 
-<!-- 程式碼範例 -->
-<h2>程式碼範例：HelloWorld</h2>
-<pre><code>
+  <!-- 命名習慣 -->
+  <h2>命名習慣</h2>
+  <ul>
+    <li>類別、介面：Hello、HelloWorld</li>
+    <li>方法、變數：name、employeeId</li>
+    <li>常數(不可改)：PI、MAX_VALUE</li>
+  </ul>
+
+  <!-- 程式碼範例 -->
+  <h2>程式碼範例：HelloWorld</h2>
+  <pre><code>
 // 單行註解
 
 // 宣告主類別
@@ -66,7 +86,9 @@ public class HelloWorld{
     } // 主方法結束 
 
 } // 主類別結束
-</code></pre>
+  </code></pre>
+
+</div> <!-- content end -->
 
 </body>
 </html>
