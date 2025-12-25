@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
@@ -6,25 +6,67 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- 導覽列 -->
 <nav>
-<a href="index.html">首頁</a>
+  <a href="index.html">首頁</a>
 </nav>
 
+<!-- 主標題 -->
 <h1>2025-12-08 學習筆記</h1>
-<h2>Java 基礎</h2>
+
+<!-- 識別字命名符號 -->
+<h2>識別字命名符號</h2>
 <ul>
-  <li>Java SE 架構</li>
-  <li>Java 版本歷史</li>
-  <li>JDK 17 下載</li>
+  <li>第一個字：a-z A-Z _(底線) $</li>
+  <li>第二個字開始：a-z A-Z 0-9 _(底線) $</li>
+  <li>Java 保留字、關鍵字不可用於命名</li>
 </ul>
 
-<h2>測試</h2>
-<pre><code>
-java
-javac
-java -version
-</code></pre>
+<!-- 命名習慣 -->
+<h2>命名習慣</h2>
+<ul>
+  <li>類別、介面：Hello、HelloWorld</li>
+  <li>方法、變數：name、employeeId</li>
+  <li>常數(不可改)：PI、MAX_VALUE</li>
+</ul>
 
+<!-- 程式碼範例 -->
+<h2>程式碼範例：HelloWorld</h2>
+<pre><code>
+// 單行註解
+
+// 宣告主類別
+
+// public 		存取修飾字：公開
+// class 		宣告類別關鍵字
+// HelloWorld		自訂類別名稱
+// { }			程式區塊
+
+public class HelloWorld{
+
+    // 主方法：程式進入點 
+    
+    // public  		存取修飾字：公開
+    // static 		類別成員，可以直接被呼叫 
+    // void 		方法型別，void 表示這個方法沒有回傳值
+    // main             主方法名稱(固定寫法)
+    // (String[] args)  方法參數
+    //                  String		字串型別
+    //                  []              陣列
+    //                  args            參數名稱 
+
+    public static void main(String[] args){
+	
+        // 程式開始執行
+        // 敘述句，要用【;】結束
+        // 標準輸出，在螢幕打印資料
+        System.out.println("Hello! World!");
+
+    } // 主方法結束 
+
+} // 主類別結束
+</code></pre>
 
 </body>
 </html>
